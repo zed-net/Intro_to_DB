@@ -39,3 +39,16 @@ CREATE TABLE Order_Details (
     book_id INT,
     quantity DOUBLE
 );
+
+-- Add foreign key constraints to the tables
+ALTER TABLE Books
+ADD FOREIGN KEY (author_id) REFERENCES Authors(author_id);
+
+ALTER TABLE Orders
+ADD FOREIGN KEY (customer_id) REFERENCES Customers(customer_id);
+
+ALTER TABLE Order_Details
+ADD FOREIGN KEY (order_id) REFERENCES Orders(order_id);
+
+ALTER TABLE Order_Details
+ADD FOREIGN KEY (book_id) REFERENCES Books(book_id);
