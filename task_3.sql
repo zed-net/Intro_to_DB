@@ -1,5 +1,6 @@
 import mysql.connector
 from mysql.connector import Error
+USE alx_book_store;
 
 def list_tables(alx_book_store):
     try:
