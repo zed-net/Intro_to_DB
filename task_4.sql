@@ -1,7 +1,7 @@
 import mysql.connector
 from mysql.connector import Error
 
-def describe_books(alx_book_store):
+def _books(alx_book_store):
     try:
         # Connect to MySQL
         conn = mysql.connector.connect(
